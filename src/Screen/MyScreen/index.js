@@ -18,6 +18,7 @@ const MyScreen = () => {
     <View style={styles.container}>
       <View style={styles.topSectionStye}>
         <TouchableOpacity
+          disabled={count == 0}
           onPress={() => countAction('decrease')}
           style={styles.buttonStyle}>
           <Text style={styles.textStyle}>-1</Text>
@@ -28,7 +29,6 @@ const MyScreen = () => {
       </View>
       <View style={styles.bottomSection}>
         <TouchableOpacity
-          disabled={count == 0}
           onPress={() => countAction('increase')}
           style={styles.buttonStyle}>
           <Text style={styles.textStyle}>+1</Text>
